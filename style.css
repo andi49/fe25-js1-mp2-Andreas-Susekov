@@ -2,3 +2,41 @@
     border: 0;
     padding: 0;
 }
+
+.bigBox {
+      list-style-type: none;
+    text-align: center;
+    margin: auto;
+    width: 650px;
+    height: 550px;
+    background-color: aqua;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.bigBox ol {
+     list-style-type: none;
+}
+
+.bigBox h1 {
+  font-family: "Barriecito", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.listOfNums{
+    display: none; 
+}
+
+
+.formStyle {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formStyle button {
+    width: 100px;
+    height: 50px;
+
+}
