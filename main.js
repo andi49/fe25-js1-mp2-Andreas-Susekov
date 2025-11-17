@@ -37,7 +37,6 @@ function rollDice() {
   clacDiceValue(valuedice);
   rounds++;
   roundCounterGame.innerText = rounds
-
   if (valuedice === 1) {
    total = 0
      currentPlayerDiceTotal.innerText = total
