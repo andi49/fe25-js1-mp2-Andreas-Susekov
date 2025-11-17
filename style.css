@@ -7,9 +7,12 @@
       list-style-type: none;
     text-align: center;
     margin: auto;
-    width: 650px;
+    width: 550px;
     height: 550px;
-    background: aqua;
+    background: url(assets/picture/200.gif);
+    background-repeat: space;
+    background-size: 100%;
+    background-position: center;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
@@ -18,15 +21,23 @@
 }
 
 .bigBox h1 {
-  font-family: "Barriecito", system-ui;
+  font-family: "Rubik Gemstones", system-ui;
   font-weight: 400;
   font-style: normal;
+  color: burlywood;
 }
 
 .listOfNums{
     display: none; 
 }
 
+ li {
+  color: burlywood;
+    font-family: "Rubik Gemstones", system-ui;
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: normal;
+}
 
 .formStyle {
   display: flex;
@@ -38,10 +49,10 @@
 .formStyle button {
     width: 100px;
     height: 50px;
-
 }
 
 .GamesButton button{
+    margin-top: 40px;
      width: 100px;
     height: 50px;
 }

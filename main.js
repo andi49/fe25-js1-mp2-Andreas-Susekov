@@ -8,9 +8,8 @@ document.querySelector("form").addEventListener("submit", function (event) {
   document.querySelector("button").style.display = "none";
   document.getElementById("myList").classList.remove("listOfNums");
   document.querySelectorAll(".buttonPressUser").forEach((btn) => {
-    btn.classList.remove("buttonPressUser");
-  });
-});
+    btn.classList.remove("buttonPressUser");})
+})
 
 const playBtn = document.querySelector("#btnpresUserGame");
 const SaveButton = document.querySelector("#btnpresUserSave");
@@ -36,7 +35,6 @@ function rollDice() {
   new Audio('/assets/sounds/dice.mp3').play();
   diceLandedatEL.innerText = valuedice;
   clacDiceValue(valuedice);
-  console.log("klickat");
   rounds++;
   roundCounterGame.innerText = rounds
 
@@ -48,7 +46,6 @@ function rollDice() {
 
 function clacDiceValue(value) {
   total += value;
-  console.log(total);
   currentPlayerDiceTotal.innerText = total
 }
 
@@ -68,10 +65,9 @@ function savepoints() {
   if (savedTotal >= 100) {
     alert("you won");
     playBtn.disabled = true;
+    SaveButton.disabled = true;
   }
 }
-
-  
 
 restartButton.addEventListener('click', restart)
 
