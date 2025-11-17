@@ -32,7 +32,7 @@ playBtn.addEventListener("click", rollDice);
 
 function rollDice() {
   const valuedice = dice();
-  new Audio('./assets/sounds/dice.mp3').play();
+  let sound = new Audio('./assets/sounds/dice.mp3').play();
   diceLandedatEL.innerText = valuedice;
   clacDiceValue(valuedice);
   rounds++;
