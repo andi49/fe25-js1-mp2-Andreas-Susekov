@@ -1,23 +1,38 @@
 * {
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
 }
 
 .bigBox {
-      list-style-type: none;
-    text-align: center;
-    margin: auto;
-    width: 550px;
-    height: 550px;
-    background: url(assets/picture/200.gif);
-    background-repeat: space;
-    background-size: 100%;
-    background-position: center;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  list-style-type: none;
+  text-align: center;
+  margin: auto;
+  width: 550px;
+  height: 550px;
+  background: url(assets/picture/200.gif);
+  background-repeat: space;
+  background-size: 100%;
+  background-position: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.subbutton{
+  background: linear-gradient(#e3e3e3, #c7c7c7);
+  border: 3px solid #888;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #666;
+  transition: all 0.1s ease-in-out;
+   font-family: "Rubik Gemstones", system-ui;
 }
 
 .bigBox ol {
-     list-style-type: none;
+  list-style-type: none;
 }
 
 .bigBox h1 {
@@ -27,16 +42,16 @@
   color: burlywood;
 }
 
-.listOfNums{
-    display: none; 
+.listOfNums {
+  display: none;
 }
 
- li {
-  color: burlywood;
-    font-family: "Rubik Gemstones", system-ui;
-    font-size: 2rem;
-    font-weight: 400;
-    font-style: normal;
+li {
+  color: rgb(207, 164, 108);
+  font-family: "Rubik Gemstones", system-ui;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .formStyle {
@@ -47,18 +62,49 @@
 }
 
 .formStyle button {
-    width: 100px;
-    height: 50px;
+  width: 100px;
+  height: 50px;
 }
 
-.GamesButton button{
-    margin-top: 40px;
-     width: 100px;
-    height: 50px;
+.GamesButton {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.GamesButton button {
+  background: linear-gradient(#AFC8FF, #AFC8FF);
+  border: 3px solid #AFC8FF;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #AFC8FF;
+  transition: all 0.1s ease-in-out;
+ font-family: "Rubik Gemstones", system-ui;
+}
+
+
+.GamesButton button:hover {
+  background: linear-gradient(#809cd8, #AFC8FF);
+}
+
+.GamesButton :active {
+  box-shadow: 0 1px 0 #AFC8FF;
+  transform: translateY(3px);
 }
 
 .buttonPressUser {
-    display: none;
+  display: none;
 }
 
-
+@media (max-width: 600px) {
+  .bigBox {
+    width: auto;
+    height: auto;
+    background-repeat: space;
+    background-size: 150%;
+  }
+}

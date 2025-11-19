@@ -3,7 +3,6 @@ document.querySelector("form").addEventListener("submit", function (event) {
 
   const userName = document.querySelector("input").value;
   document.querySelector("h1").textContent = "🐖" + userName + "🐖";
-
   document.querySelector("input").style.display = "none";
   document.querySelector("button").style.display = "none";
   document.getElementById("myList").classList.remove("listOfNums");
@@ -36,16 +35,16 @@ function rollDice() {
   diceLandedatEL.innerText = valuedice;
   clacDiceValue(valuedice);
   rounds++;
-  roundCounterGame.innerText = rounds
+  roundCounterGame.innerText = 'Thrown'+ ' ' + rounds + ' ' + 'times'
   if (valuedice === 1) {
-   total = 0
+   total =  0
      currentPlayerDiceTotal.innerText = total
   }
 }
 
 function clacDiceValue(value) {
   total += value;
-  currentPlayerDiceTotal.innerText = total
+  currentPlayerDiceTotal.innerText = 'Points' + ' ' + total
 }
 
 SaveButton.addEventListener('click', savepoints) 
@@ -54,10 +53,10 @@ function savepoints() {
 
   savedTotal += total;
 
-  currentPlayerTotalPoint.innerText = savedTotal;
+  currentPlayerTotalPoint.innerText = 'Points' + ' ' + savedTotal;
 
   total = 0;
-  currentPlayerDiceTotal.innerText = total;
+  currentPlayerDiceTotal.innerText = 'Points' + ' ' + total;
 
   console.log("Points saved");
 
