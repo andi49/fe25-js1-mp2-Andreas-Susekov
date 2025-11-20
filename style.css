@@ -8,9 +8,9 @@
   text-align: center;
   margin: auto;
   width: 550px;
-  height: 550px;
+  height: auto;
   background: url(assets/picture/200.gif);
-  background-repeat: space;
+  background-repeat: initial;
   background-size: 100%;
   background-position: center;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -78,7 +78,8 @@ li {
   color: rgb(207, 164, 108);
   font-family: "Rubik Gemstones", system-ui;
   background: rgba(0, 0, 0, 0.45); 
-  padding: 8px 8px;
+  padding: 12px 12px;
+  font-size: 1.5rem;
   border-radius: 12px;
   width: fit-content;
   margin: 5px auto;
@@ -169,7 +170,8 @@ li {
   .bigBox {
     width: auto;
     height: auto;
-    background-repeat: space;
-    background-size: 150%;
+    background-repeat: initial;
+    background-size: 100%;
+    background-position: center;
   }
 }
