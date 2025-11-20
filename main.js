@@ -67,7 +67,7 @@ function savepoints() {
     document.querySelector('.popupBox').style.display = 'flex'
 
     document.querySelector('#totalpointspop').innerText = `You got ${savedTotal} points`
-    document.querySelector('#totalroundspop').innerText = `And you did it in  ${rounds} throws`
+    document.querySelector('#totalroundspop').innerText = `You did it in  ${rounds} throws`
   }
 
 
