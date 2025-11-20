@@ -17,6 +17,34 @@
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
+input {
+  padding: 2px 3px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  width: 100px;
+  transition: 0.25s;
+}
+
+input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.5);
+}
+
+.bkbox ul li {
+  width: 90%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.554);
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-style: italic;
+  color: rgb(212, 153, 77);
+  text-align: left;
+  list-style-type: none;
+  line-height: 1.2;
+}
+
 
 .subbutton{
   background: linear-gradient(#e3e3e3, #c7c7c7);
@@ -49,9 +77,15 @@
 li {
   color: rgb(207, 164, 108);
   font-family: "Rubik Gemstones", system-ui;
-  font-size: 2rem;
-  font-weight: 400;
-  font-style: normal;
+  background: rgba(0, 0, 0, 0.45); 
+  padding: 8px 8px;
+  border-radius: 12px;
+  width: fit-content;
+  margin: 5px auto;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 0 4px rgba(0,0,0,0.7);
+  
 }
 
 .formStyle {
@@ -71,6 +105,16 @@ li {
   flex-direction: column;
   gap: 15px;
   align-items: center;
+}
+
+.closebtnpopup{
+  background: linear-gradient(#7ddd7d, #d9d629);
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: grab;
+  transition: all 0.1s ease-in-out;
+ font-family: "Rubik Gemstones", system-ui;
 }
 
 .GamesButton button {
@@ -99,6 +143,27 @@ li {
 .buttonPressUser {
   display: none;
 }
+
+.popupBox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.popupinner {
+  background: white;
+  padding: 25px 35px;
+  border-radius: 12px;
+  font-size: 20px;
+  max-width: 300px;
+  text-align: center;  
+}
+
+
 
 @media (max-width: 600px) {
   .bigBox {

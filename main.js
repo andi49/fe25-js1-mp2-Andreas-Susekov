@@ -5,6 +5,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
   document.querySelector("h1").textContent = "🐖" + userName + "🐖";
   document.querySelector("input").style.display = "none";
   document.querySelector("button").style.display = "none";
+  document.querySelector('.bkbox').remove()
   document.getElementById("myList").classList.remove("listOfNums");
   document.querySelectorAll(".buttonPressUser").forEach((btn) => {
     btn.classList.remove("buttonPressUser");})
@@ -44,7 +45,7 @@ function rollDice() {
 
 function clacDiceValue(value) {
   total += value;
-  currentPlayerDiceTotal.innerText = 'Points' + ' ' + total
+  currentPlayerDiceTotal.innerText = total + ' ' + 'Points';
 }
 
 SaveButton.addEventListener('click', savepoints) 
@@ -53,22 +54,31 @@ function savepoints() {
 
   savedTotal += total;
 
-  currentPlayerTotalPoint.innerText = 'Points' + ' ' + savedTotal;
+  currentPlayerTotalPoint.innerText =savedTotal + ' ' + 'Points';
 
   total = 0;
-  currentPlayerDiceTotal.innerText = 'Points' + ' ' + total;
+  currentPlayerDiceTotal.innerText =total + ' ' + 'Points';
 
   console.log("Points saved");
 
   if (savedTotal >= 100) {
-    alert("you won");
     playBtn.disabled = true;
     SaveButton.disabled = true;
-  }
-}
+    document.querySelector('.popupBox').style.display = 'flex'
 
+    document.querySelector('#totalpointspop').innerText = `You got ${savedTotal} points`
+    document.querySelector('#totalroundspop').innerText = `And you did it in  ${rounds} throws`
+  }
+
+
+}
+  document.querySelector('#closepopupButton').addEventListener('click', function() {
+    document.querySelector('.popupBox').style.display = 'none'
+  })
+  
 restartButton.addEventListener('click', restart)
 
 function restart() {
     document.location.reload()
 }
+

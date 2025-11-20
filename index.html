@@ -23,8 +23,24 @@
         <form action="" class="formStyle">
            <input type="text" required>
             <button class="subbutton">click</button>
+            <div class="bkbox">
+              <ul>
+                <li>1. Player rolls one die.</li>
+                <li>2. You can roll as many times as you want.</li>
+                <li>3. Game will add your numbers together to make your turn score.</li>
+                <li>4. But if you roll a 1, your turn score becomes 0</li>
+                <li>5. If you don’t want to risk it, you can press “SAVE POINTS” to keep your turn score and add it to your total.</li>
+                 <li>6. You need 100 points to win</li>
+              </ul>
+            </div>
         </form>
-        
+        <div class="popupBox">
+            <div class="popupinner">
+                <h2 id="totalpointspop"></h2>
+                <p id="totalroundspop"></p>
+                <button id="closepopupButton" class="closebtnpopup" >Close</button>
+            </div>
+        </div>
         <ol class="listOfNums" id="myList">
             <li id="totalPoint">0</li>
             <li id="roundsCounter">0</li>
