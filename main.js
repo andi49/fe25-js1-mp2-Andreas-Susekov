@@ -21,7 +21,8 @@ const roundCounterGame = document.querySelector('#roundsCounter')
 
 let total = 0;
 let savedTotal = 0;
-let rounds = 0;
+let rounds = 1;
+document.querySelector("#roundsCounter").innerText = rounds
 
 function dice() {
   const value = Math.floor(Math.random() * 6) + 1;
@@ -35,12 +36,14 @@ function rollDice() {
   let sound = new Audio('./assets/sounds/dice.mp3').play();
   diceLandedatEL.innerText = valuedice;
   clacDiceValue(valuedice);
-  rounds++;
-  roundCounterGame.innerText = `Thrown ${rounds} times`
+  // rounds++;
+  // roundCounterGame.innerText = `Thrown ${rounds} times`
  
   if (valuedice === 1) {
    total =  0
      currentPlayerDiceTotal.innerText = total
+     rounds++;
+     document.querySelector("#roundsCounter").innerText = rounds
   }
 }
 
@@ -57,6 +60,8 @@ function savepoints() {
 
   currentPlayerTotalPoint.innerText = `${savedTotal}  Points`
 
+    rounds++;
+    document.querySelector("#roundsCounter").textContent = rounds
 
   total = 0;
   currentPlayerDiceTotal.innerText = `${total}  Points`
