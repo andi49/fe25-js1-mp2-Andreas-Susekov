@@ -36,7 +36,8 @@ function rollDice() {
   diceLandedatEL.innerText = valuedice;
   clacDiceValue(valuedice);
   rounds++;
-  roundCounterGame.innerText = 'Thrown'+ ' ' + rounds + ' ' + 'times'
+  roundCounterGame.innerText = `Thrown ${rounds} times`
+ 
   if (valuedice === 1) {
    total =  0
      currentPlayerDiceTotal.innerText = total
@@ -45,7 +46,7 @@ function rollDice() {
 
 function clacDiceValue(value) {
   total += value;
-  currentPlayerDiceTotal.innerText = total + ' ' + 'Points';
+  currentPlayerDiceTotal.innerText = `${total}  Points`
 }
 
 SaveButton.addEventListener('click', savepoints) 
@@ -54,10 +55,11 @@ function savepoints() {
 
   savedTotal += total;
 
-  currentPlayerTotalPoint.innerText =savedTotal + ' ' + 'Points';
+  currentPlayerTotalPoint.innerText = `${savedTotal}  Points`
+
 
   total = 0;
-  currentPlayerDiceTotal.innerText =total + ' ' + 'Points';
+  currentPlayerDiceTotal.innerText = `${total}  Points`
 
   console.log("Points saved");
 
