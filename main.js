@@ -22,7 +22,7 @@ const roundCounterGame = document.querySelector('#roundsCounter')
 let total = 0;
 let savedTotal = 0;
 let rounds = 1;
-document.querySelector("#roundsCounter").innerText = rounds
+document.querySelector("#roundsCounter").textContent = `Round ${rounds}` 
 
 function dice() {
   const value = Math.floor(Math.random() * 6) + 1;
@@ -43,7 +43,7 @@ function rollDice() {
    total =  0
      currentPlayerDiceTotal.innerText = total
      rounds++;
-     document.querySelector("#roundsCounter").innerText = rounds
+    document.querySelector("#roundsCounter").textContent = `Round ${rounds}` 
   }
 }
 
@@ -61,7 +61,7 @@ function savepoints() {
   currentPlayerTotalPoint.innerText = `${savedTotal}  Points`
 
     rounds++;
-    document.querySelector("#roundsCounter").textContent = rounds
+    document.querySelector("#roundsCounter").textContent = `Round ${rounds}` 
 
   total = 0;
   currentPlayerDiceTotal.innerText = `${total}  Points`
